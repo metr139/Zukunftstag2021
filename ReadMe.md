@@ -9,7 +9,7 @@ Wenn du den Ablauf richtig gemacht hast, ertönt Applaus und ein Haken erscheint
 - Lade das ["Visual Studio Code" ](https://code.visualstudio.com/) auf deinen PC.
 - Installiere Visual Studio Code, indem du die Installationdatei doppelklickst.
 - Öffne das Menü "Ausführen" und klicke "Zusätzliche Debugger installieren"  
-  - Installiere das "C#" Paket ![C# Debugger](Dokumentation\img03.png)
+  - Installiere das "C#" Paket ![C# Debugger](Dokumentation/img03.png)
   - Oder per Link: https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
 
 - Optional, Installiere das Deutsche Sprachpaket
@@ -19,16 +19,16 @@ Wenn du den Ablauf richtig gemacht hast, ertönt Applaus und ein Haken erscheint
 
 ### Lichtspiel herunterladen
 Von GitHub Zip herunterladen.  
-![Herunterladen](Dokumentation\img01.png)
+![Herunterladen](Dokumentation/img01.png)
 
 Und diese Datei entpacken.  
-![Entpacken](Dokumentation\img02.png)
+![Entpacken](Dokumentation/img02.png)
 
 ### Lichtspiel öffnen
 Im Menü "Datei" klicke "Ordner öffnen" und dann wählst du den Ort an dem du den Quellcode entpackt hast.
-![Ordner Oeffnen](Dokumentation\img04.png)  
+![Ordner Oeffnen](Dokumentation/img04.png)  
 Die wichtigen Dateien zum verändern sind hier  
-![Uebersicht](Dokumentation\img05.png)  
+![Uebersicht](Dokumentation/img05.png)  
 
 ### Lichtspiel ausführen
 Im Menü "Ausführen" klicke "Debugging starten".  

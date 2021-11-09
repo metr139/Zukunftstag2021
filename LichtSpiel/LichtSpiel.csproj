@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\False.png" />
+    <None Remove="images\Green-Tick-N7.png" />
+    <None Remove="images\True.png" />
+    <None Remove="sounds\applause.wav" />
+    <None Remove="sounds\boo.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="sounds\applause.wav" />
+    <EmbeddedResource Include="sounds\boo.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\False.png" />
+    <Resource Include="images\True.png" />
+  </ItemGroup>
+
+</Project>

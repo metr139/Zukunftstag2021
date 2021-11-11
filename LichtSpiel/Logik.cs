@@ -24,6 +24,7 @@ namespace LichtSpiel
             _anzeige.BenutzerKnopfRot.IsEnabled = false;
             _anzeige.BenutzerKnopfBlau.IsEnabled = false;
             _anzeige.BenutzerKnopfGruen.IsEnabled = false;
+            _anzeige.BenutzerKnopfOrange.IsEnabled = false;
 
             _anzeige.KnopfRot.Background = Brushes.DarkRed;
             _anzeige.BenutzerKnopfRot.Background = Brushes.DarkRed;
@@ -33,6 +34,9 @@ namespace LichtSpiel
 
             _anzeige.KnopfGruen.Background = Brushes.Green;
             _anzeige.BenutzerKnopfGruen.Background = Brushes.Green;
+
+            _anzeige.KnopfOrange.Background = Brushes.Orange;
+            _anzeige.BenutzerKnopfOrange.Background = Brushes.Orange;
         }
 
         public async Task Start_Knopf_Geklickt()
@@ -53,6 +57,7 @@ namespace LichtSpiel
             _anzeige.BenutzerKnopfRot.IsEnabled = true;
             _anzeige.BenutzerKnopfBlau.IsEnabled = true;
             _anzeige.BenutzerKnopfGruen.IsEnabled = true;
+            _anzeige.BenutzerKnopfOrange.IsEnabled = true;
         }
 
         private void KnoepfeAbschalten()
@@ -66,6 +71,7 @@ namespace LichtSpiel
             _anzeige.BenutzerKnopfRot.IsEnabled = false;
             _anzeige.BenutzerKnopfBlau.IsEnabled = false;
             _anzeige.BenutzerKnopfGruen.IsEnabled = false;
+            _anzeige.BenutzerKnopfOrange.IsEnabled = false;
         }
 
         private async Task FarbenAbspielen(Liste<Farbe> farbliste)
@@ -98,6 +104,11 @@ namespace LichtSpiel
                         aktuellerKnopf = _anzeige.KnopfGruen;
                         break;
                     }
+                case Farbe.Orange:
+                    {
+                        aktuellerKnopf = _anzeige.KnopfOrange;
+                        break;
+                    }
             }
 
             Storyboard.SetTarget(animation, aktuellerKnopf);
@@ -122,7 +133,7 @@ namespace LichtSpiel
             var neueFarbenListe = new Liste<Farbe>();
             var zufallsGenerator = new FarbenZufallsGenerator();
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 5; i++)
             {
                 Farbe farbe = zufallsGenerator.GibFarbe();
 
@@ -132,13 +143,13 @@ namespace LichtSpiel
             return neueFarbenListe;
         }
 
-        public void BenutzerKnopfRot_Geklickt()
+        public void BenutzerKnopfBlau_Geklickt()
         {
-            _benutzerListe.Hinzufuegen(Farbe.Rot);
+            _benutzerListe.Hinzufuegen(Farbe.Blau);
             BenutzerEingabeUeberpruefen();
         }
 
-        public void BenutzerKnopfBlau_Geklickt()
+        public void BenutzerKnopfRot_Geklickt()
         {
             _benutzerListe.Hinzufuegen(Farbe.Rot);
             BenutzerEingabeUeberpruefen();
@@ -147,6 +158,12 @@ namespace LichtSpiel
         public void BenutzerKnopfGruen_Geklickt()
         {
             _benutzerListe.Hinzufuegen(Farbe.Gruen);
+            BenutzerEingabeUeberpruefen();
+        }
+
+        public void BenutzerKnopfOrange_Geklickt()
+        {
+            _benutzerListe.Hinzufuegen(Farbe.Orange);
             BenutzerEingabeUeberpruefen();
         }
 

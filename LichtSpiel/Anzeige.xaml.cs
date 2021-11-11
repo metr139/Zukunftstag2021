@@ -33,5 +33,10 @@ namespace LichtSpiel
         {
             _logik.BenutzerKnopfGruen_Geklickt();
         }
+        
+        private void BenutzerKnopfOrange_Geklickt(object sender, RoutedEventArgs e)
+        {
+            _logik.BenutzerKnopfOrange_Geklickt();
+        }
     }
 }
